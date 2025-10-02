@@ -1,0 +1,65 @@
+@url_dev=http://localhost:3000/v1/api
+
+### CREATE DISCOUNT
+POST {{url_dev}}/discount
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjMyMjM5NSwiZXhwIjoxNzUyNDk1MTk1fQ.4V-rpA-gVXjmiZI44trO9C8ejc081YIUf1iqluSvnOM
+
+{
+  "name": "name fixed amount",
+  "description": "description",
+  "type": "percentage",
+  "value": 10,
+  "max_value": 30000,
+  "code": "SHOP-1133",
+  "start_date": "2025-07-13 05:00:00",
+  "end_date": "2025-07-19 05:00:00",
+  "max_uses": 100,
+  "used_count": 0,
+  "users_used": [],
+  "max_uses_per_user": 1,
+  "min_order_value": 200000,
+  "created_by": {},
+  "is_active": true,
+  "applies_to": "specific",
+  "product_ids": ["686bf72858fa1062c45f3e15", "686cb2c2ce1a97c4d3b63a72"]
+}
+
+### GET DISCOUNT AMOUNT
+POST {{url_dev}}/discount/amount
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjE1Nzg5OCwiZXhwIjoxNzUyMzMwNjk4fQ.sVTDiXQvFd5GzkmVsVgWj1SRZejz-X1qPBNNm8PcA5I
+
+{
+  "codeId": "SHOP-1122",
+  "userId": 2,
+  "shopId": "686b74e33c02f2cf1117a6f9",
+  "value": 20000,
+  "products": [
+    {
+      "productId": "686bf72858fa1062c45f3e15",
+      "quantity": 5,
+      "price": 120000
+    }
+  ]
+}
+
+### GET DISCOUNT CODE BY PRODUCT
+GET {{url_dev}}/discount/list_product_code?code=SHOP-1122
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjE1Nzg5OCwiZXhwIjoxNzUyMzMwNjk4fQ.sVTDiXQvFd5GzkmVsVgWj1SRZejz-X1qPBNNm8PcA5I
+
+### GET DISCOUNT CODE BY SHOP
+GET {{url_dev}}/discount
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjMyMjM5NSwiZXhwIjoxNzUyNDk1MTk1fQ.4V-rpA-gVXjmiZI44trO9C8ejc081YIUf1iqluSvnOM
+
+

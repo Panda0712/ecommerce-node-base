@@ -1,0 +1,1 @@
+2025-07-28 13:24:28::error::/v1/api/product::08d61513-77a9-4676-b59c-fb9a60d3416d::undefined - function now() { [native code] }ms - Response: {"name":"JsonWebTokenError","message":"invalid signature"}::{"message":"invalid signature"}

@@ -1,0 +1,6 @@
+2025-07-26 12:42:21::info::/v1/api/email/new_user::4aab2ada-757f-4882-a46c-3c780f4046d4::input params ::POST::::undefined
+2025-07-26 12:42:21::error::[object Object]::25ad8fb9-1112-459a-bfcd-fe0b5933c310::Invalid request!::undefined
+2025-07-26 12:42:21::error::/v1/api/email/new_user::4aab2ada-757f-4882-a46c-3c780f4046d4::401 - function now() { [native code] }ms - Response: {"status":401}::{"message":"Invalid request!"}
+2025-07-26 12:42:40::info::/v1/api/email/new_user::976904ec-2dc5-4bf0-ab59-8a4228747ab1::input params ::POST::::undefined
+2025-07-26 12:42:40::error::[object Object]::9c89e546-3002-466d-88c5-43102c1ee965::Invalid Request!::undefined
+2025-07-26 12:42:40::error::/v1/api/email/new_user::976904ec-2dc5-4bf0-ab59-8a4228747ab1::401 - function now() { [native code] }ms - Response: {"status":401}::{"message":"Invalid Request!"}

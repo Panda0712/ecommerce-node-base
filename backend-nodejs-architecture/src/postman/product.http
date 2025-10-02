@@ -1,0 +1,160 @@
+@url_dev=http://localhost:3000/v1/api
+
+### CREATE NEW PRODUCT SPU
+POST {{url_dev}}/product/new_spu
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MzY4Mzg3OSwiZXhwIjoxNzUzODU2Njc5fQ.elQXLw8m-HX6mKZoj5QBWezG1qAb7H-v-rgI1n_JzQw
+
+{
+  "product_name": "Áo thun hàn quốc",
+  "product_thumb": "https://thumb.shopdev.com/p/thumb111",
+  "product_description": "Áo thun nam H&M kiểu dáng Regular fit tôn dáng cơ thể, làm nổi bật form người mặc thêm nam tính, khoẻ khoắn mà vẫn thoải mái vận động.",
+  "product_price": 111000,
+  "product_quantity": 23,
+  "product_type": "Clothing",
+  "product_category": [100001, 100003, 100003],
+  "product_attributes": [{
+    "attribute_id": 200005, 
+    "attribute_values": [
+      { "value_id": 1 },
+      { "value_id": 2 }
+    ]
+  }],
+  "product_variations": [
+    {
+      "images": [],
+      "name": "color",
+      "options": ["red", "green"]
+    },
+    {
+      "images": [],
+      "name": "size",
+      "options": ["S", "M"]
+    }
+  ],
+  "sku_list": [
+    {
+      "sku_tier_idx": [0, 0], 
+      "sku_price": "1000",
+      "sku_stock": 10
+    },
+    {
+      "sku_tier_idx": [0, 1], 
+      "sku_price": "1000",
+      "sku_stock": 10
+    },
+    {
+      "sku_tier_idx": [1, 0], 
+      "sku_price": "1000",
+      "sku_stock": 10
+    },
+    {
+      "sku_tier_idx": [1, 1], 
+      "sku_price": "1000",
+      "sku_stock": 10
+    }
+  ]
+}
+
+### GET ONE SKU 
+GET {{url_dev}}/product/sku?sku_id=771674.792958&product_id=771674
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MzY4Mzg3OSwiZXhwIjoxNzUzODU2Njc5fQ.elQXLw8m-HX6mKZoj5QBWezG1qAb7H-v-rgI1n_JzQw
+
+### GET ONE SPU
+GET {{url_dev}}/product/spu?product_id=771674
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MzY4Mzg3OSwiZXhwIjoxNzUzODU2Njc5fQ.elQXLw8m-HX6mKZoj5QBWezG1qAb7H-v-rgI1n_JzQw
+
+### CREATE PRODUCT
+POST {{url_dev}}/product
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjkyNTg0MSwiZXhwIjoxNzUzMDk4NjQxfQ.3Xr_PBiSzy-Tutk8wJ4vOHTnX6_ml-gT8Ud9-aVTWS8
+
+{
+  "product_name": "Iphone 16 Pro Max push notification",
+  "product_description": "Magenta color",
+  "product_price": 50,
+  "product_shop": "686b74e33c02f2cf1117a6f9",
+  "product_type": "Electronics",
+  "product_thumb": "product_thumb",
+  "product_quantity": 5,
+  "product_attributes": {
+    "manufacturer": "Apple",
+    "model": "Apple",
+    "color": "Black"
+  }
+}
+
+### UPDATE PRODUCT
+PATCH {{url_dev}}/product/686cb2c2ce1a97c4d3b63a72
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjMyMjM5NSwiZXhwIjoxNzUyNDk1MTk1fQ.4V-rpA-gVXjmiZI44trO9C8ejc081YIUf1iqluSvnOM
+
+{
+  "product_name": "Iphone 16 Pro Max",
+  "product_description": "Magenta color",
+  "product_price": 200000,
+  "product_shop": "686b74e33c02f2cf1117a6f9",
+  "product_type": "Clothing",
+  "product_thumb": "product_thumb",
+  "product_quantity": 5,
+  "product_attributes": {
+    "manufacturer": "Apple",
+    "model": "Apple",
+    "color": "Black"
+  }
+}
+
+### GET DRAFTS PRODUCT
+GET {{url_dev}}/product/drafts/all
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjMyMjM5NSwiZXhwIjoxNzUyNDk1MTk1fQ.4V-rpA-gVXjmiZI44trO9C8ejc081YIUf1iqluSvnOM
+
+### GET PUBLISHED PRODUCT
+GET {{url_dev}}/product/published/all
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1Mjg1ODA1NCwiZXhwIjoxNzUzMDMwODU0fQ.MVLv5sNiFCXtQxYntLitPhvGJM9dOBNG8FW5PwBIxbM
+
+### PUBLISH PRODUCT
+POST {{url_dev}}/product/686cb2c2ce1a97c4d3b63a72
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjMyMjM5NSwiZXhwIjoxNzUyNDk1MTk1fQ.4V-rpA-gVXjmiZI44trO9C8ejc081YIUf1iqluSvnOM
+
+### UNPUBLISH PRODUCT
+POST {{url_dev}}/product/unpublish/686bf72858fa1062c45f3e15
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MTk4NjkwMiwiZXhwIjoxNzUyMTU5NzAyfQ.Kj9G_AUh6YLVNv3YJ4IHaeK9qtKrdXsyXVA4b7ulg_k
+
+### SEARCH PRODUCT
+GET {{url_dev}}/product/search/iphone
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+
+### FIND ALL PRODUCTS (PUBLISHED:TRUE)
+GET {{url_dev}}/product
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+
+### FIND SPECIFIC PRODUCT
+GET {{url_dev}}/product/686bf72858fa1062c45f3e15
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32

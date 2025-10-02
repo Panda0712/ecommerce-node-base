@@ -1,0 +1,64 @@
+@url_dev=http://localhost:3000/v1/api
+
+### ADD TO CART
+POST {{url_dev}}/cart
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjA2OTU2MiwiZXhwIjoxNzUyMjQyMzYyfQ.peHf9ERgD_gIygojqJZ4KKRwc__zMckrDxpcB4gXI1c
+
+{
+  "userId": 1001,
+  "product": {
+    "productId": "686bf72858fa1062c45f3e15",
+    "shopId": "686b74e33c02f2cf1117a6f9",
+    "quantity": 10,
+    "name": "Combo 3 Áo thun nam Cotton Compact Premium",
+    "price": 100000
+  }
+}
+
+### DELETE PRODUCT FROM CART
+DELETE {{url_dev}}/cart
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjA2OTU2MiwiZXhwIjoxNzUyMjQyMzYyfQ.peHf9ERgD_gIygojqJZ4KKRwc__zMckrDxpcB4gXI1c
+
+{
+  "userId": 1001,
+  "productId": "686bf72858fa1062c45f3e15"
+}
+
+### GET LIST CART
+GET {{url_dev}}/cart?userId=1001
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjA2OTU2MiwiZXhwIjoxNzUyMjQyMzYyfQ.peHf9ERgD_gIygojqJZ4KKRwc__zMckrDxpcB4gXI1c
+
+### UPDATE CART
+POST {{url_dev}}/cart/update
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+x-client-id: 686b74e33c02f2cf1117a6f9
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaG9wSWQiOiI2ODZiNzRlMzNjMDJmMmNmMTExN2E2ZjkiLCJlbWFpbCI6InBhbmRhU2hvcDAyQGdtYWlsLmNvbSIsImlhdCI6MTc1MjA2OTU2MiwiZXhwIjoxNzUyMjQyMzYyfQ.peHf9ERgD_gIygojqJZ4KKRwc__zMckrDxpcB4gXI1c
+
+{
+  "userId": 1001,
+  "shop_order_ids": [
+    {
+      "shopId": "686b74e33c02f2cf1117a6f9",
+      "item_products": [
+        {
+          "quantity": 2,
+          "price": 1234,
+          "shopId": "686b74e33c02f2cf1117a6f9",
+          "old_quantity": 1,
+          "productId": "686bf72858fa1062c45f3e15"
+        }
+      ],
+      "version": 2000
+    }
+  ]
+}

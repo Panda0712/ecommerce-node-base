@@ -1,0 +1,4 @@
+2025-07-26 12:45:39::info::/v1/api/email/new_template::5c5c2053-c560-4310-9134-8f0ec6750915::input params ::POST::::undefined
+2025-07-26 12:45:47::info::/v1/api/email/new_user::4e8f4bb8-7e15-46fc-99e4-e50fc02be4e4::input params ::POST::::undefined
+2025-07-26 12:45:47::error::[object Object]::28e23658-096c-406f-a4b4-219272cd4c1c::Invalid request!::undefined
+2025-07-26 12:45:47::error::/v1/api/email/new_user::4e8f4bb8-7e15-46fc-99e4-e50fc02be4e4::401 - function now() { [native code] }ms - Response: {"status":401}::{"message":"Invalid request!"}

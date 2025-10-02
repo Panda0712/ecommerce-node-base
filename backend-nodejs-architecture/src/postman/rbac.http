@@ -1,0 +1,46 @@
+@url_dev=http://localhost:3000/v1/api
+
+### CREATE NEW ROLE
+POST {{url_dev}}/rbac/role
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+# x-client-id: 686b74e33c02f2cf1117a6f9
+
+{
+  "name": "user",
+  "slug": "s00002",
+  "description": "extend from user",
+  "force": true,
+  "grants": [
+    {
+      "resource": "68837be600ced050fca1be7a",
+      "actions": ["update:own", "read:own"],
+      "attributes": "*"
+    }
+  ]
+}
+
+### CREATE NEW RESOURCE
+POST {{url_dev}}/rbac/resource
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+# x-client-id: 686b74e33c02f2cf1117a6f9
+
+{
+  "name": "balance",
+  "slug": "p0002",
+  "description": "balance global"
+}
+
+### GET LIST RESOURCE
+GET {{url_dev}}/rbac/resources
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+# x-client-id: 686b74e33c02f2cf1117a6f9
+
+### GET LIST ROLE
+GET {{url_dev}}/rbac/roles
+Content-Type: application/json
+x-api-key : 1ebedd8911d3e3b745ab8be9f23d13ed85f94d7dab06ea2005a7d7d37c7d13fbfc811e2370f767a806437cfa69f206cc214aafb6b3e3960debada2f171d47e32
+# x-client-id: 686b74e33c02f2cf1117a6f9
+

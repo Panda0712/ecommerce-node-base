@@ -1,0 +1,1 @@
+2025-07-26 12:46:27::error::/v1/api/user/new_user::586ea6d7-8df2-4bee-95f1-71f354f9d781::undefined - function now() { [native code] }ms - Response: {}::{"message":"email is not defined"}

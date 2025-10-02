@@ -1,0 +1,2 @@
+2025-07-26 12:43:42::error::[object Object]::b89b6d2d-00b1-452a-9022-1a7d9985b333::Invalid Request!::undefined
+2025-07-26 12:43:42::error::/v1/api/email/new_user::f567107f-6514-4d34-ab92-edafeb67d308::401 - function now() { [native code] }ms - Response: {"status":401}::{"message":"Invalid Request!"}
